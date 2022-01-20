@@ -1,128 +1,179 @@
-// Olekseenko Dmitrij dn170691odv dmitrij.olekseenko@privatbank.ua
+// // Olekseenko Dmitrij dn170691odv dmitrij.olekseenko@privatbank.ua
 
-// task1
-var a = 1;
-var b = 5;
-var result = (a + b > 4) ? true : false;
-console.log(result);
+// // task 1
 
-// task 2
-var login = "Dima";
-var message = (login == 'Pitter') ? 'Hi' :
-(login == 'Owner') ? 'Hello' :
-(login == '') ? 'unknown' : "something"
-console.log(message);
+// function f(a) {
+// if (typeof a === 'number') {
+//     return  a * 2 * 2
+// } else {
+//     throw new Error('parameter type is not a Number')
+// } 
+// }
+// console.log(f(2));
+// console.log(f('Content'))
 
-// task3
-var val = "b";
-if (val === "a") {
-    console.log("a");
-} else if (val === "b" || val === "c" || val === "d" || val === "e") {
-    console.log('others');
-} else {
-    console.log( 'unknown' );
-}
+// task2
 
-// task4
+// function f() {
+//     let sum = 0;
+//     for (i = 0; i < arguments.length; i++){
+//         if (typeof arguments[i] === 'number') {
+//             sum += arguments[i]
+//         } else {
+//             throw new Error('parameter type is not a Number')
+//         }        
+//     }
+//     return sum
+// }
 
-var a = 1;
-switch(a) {
-    case 0:
-        console.log(0);
-        break;
-    case 1:
-        console.log(1);
-        break;
-    case 2:
-    case 3:
-        console.log('2,3')
-        break;
-} 
+// console.log(f(1,2,3));
+// console.log(f(1,1,1,1,1,1,1,1));
+// console.log(f(1,2,'s',4));
 
-// task5
-var i = 0;
-while (i < 3) {
-    console.log(i);
-    i++ 
-}
+// // task 3
 
-// task6
-var arr = [1,2,3,4];
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    sum += arr[i]
-}
-console.log(sum);
+// function f(a,b,c) {
+//     for (key in arguments){
+//         if (typeof arguments[key] === 'number') {
+//             return (a - b) / c
+//         } else {
+//             throw new Error('parameter type is not a Number')
+//         }
+//     }
+// }
+// console.log(f(9,3,2));
+// console.log(f('s',9,3));
 
-// task7
+// // task 4
+// function f() {
+//     let day;
+//     for (key in arguments){
+//          if (typeof arguments[key] === 'number') {
+//             switch(arguments[key]){
+//                 case 1:
+//                     day = "Воскресенье";
+//                     break;
+//                 case 2: 
+//                     day = "Понедельник";
+//                     break;
+//                 case 3:
+//                     day = "Вторник";
+//                     break;
+//                 case 4:
+//                     day = "Среда";
+//                     break;
+//                 case 5:
+//                     day = "Четверг";
+//                     break;
+//                 case 6:
+//                     day = "Пятница";
+//                     break;
+//                 case 7:
+//                     day = "Суббота";
+//                     break;
+//                 default:
+//                     throw new Error ('parameter should be in the range of 1 to 7')
+//             } 
+//          } else {
+//             throw new Error('parameter type is not a Number')
+//          }
+//     }
+//     return day;
+// }
+// console.log(f(1));
+// console.log(f(2));
+// console.log(f(8));
+// console.log(f('1'));
 
-var arr = [1,2,3,4];
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-        sum += arr[i];
-    }
-}
-console.log(sum);
+// // task 5
+// Если Вашу задачу правильно понял.
 
-// task8
+// let arr = [1, 2, -4, 3, -9, -1, 7];
+// let newArr = []
+// for (i = 0; i < arr.length; i++) {
+//         newArr.push(isPositive(arr[i]))
+    
+// }
+// function isPositive() {
+//     for (key in arguments) {
+//         if (typeof arguments[key] === 'number' && arguments[key] > 0){
+//             return true
+//         } else if (arguments[key] < 0) {
+//             return false
+//         } else {
+//             throw new Error('parameter type is not a Number')
+//         }
+        
+//     }
+// }
+// console.log(isPositive(-3));
+// console.log(isPositive(3));
+// console.log(newArr);
+// console.log(isPositive('s'));
 
-var arr = [1,2,3,4];
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if ((arr[i] >= 3) && (arr[i] % 2 === 0)) {
-        sum += arr[i]
-    }
-}
-console.log(sum);
+// // task 6 
 
-// task9
+// function isEven() {     
+//         for (key in arguments) {
+//             if (typeof arguments[key] === 'number') {
+//                 if (Number.isInteger(arguments[key]) && arguments[key] % 2 === 0 ){
+//                     return true
+//                 } else {
+//                     return false
+//                 }
+//             } else {
+//                 throw new Error('parameter type is not a Number')
+//             }
+//     }
+// }
 
-var arr = [1,2,3,4,5,6];
-for (i = arr.length - 1; i >= 0; i--) {
-    console.log(arr[i]);
-}
+// console.log(isEven(3));
+// console.log(isEven(4));
+// console.log(isEven('Content'));
 
-// task10
-var arr = [6,5,4,3,2,1];
-for (i = arr.length - 1; i >= 0; i--) {
-    console.log(arr[i]);
-}
+// // task 7
 
-// task11
-var arr = [2, 5, 9, 15, 0, 4];
-for (i = 0; i < arr.length; i++) {
-    if (arr[i] > 3 && arr[i] < 10) {
-        console.log(arr[i]);
-    }
-}
+// function getDivisors(a) {
+//     let arr = [];
+//     if (typeof a === 'number' && a > 0) {
+//         for (i = 1; i <= a; i++) {
+//             if (a % i === 0) {
+//                 arr.push(i);
+//             }
+//         }
+//     } else if (a <= 0) {
+//         throw new Error(`Error: parameter can't be a 0`)
+//     } else {
+//         throw new Error('parameter type is not a Number')
+//     }
+//     return arr
+// }
+// console.log(getDivisors(12));
+// console.log(getDivisors('Content'));
+// console.log(getDivisors(0));
 
-// task12
-var arr = [1,2,3,-5,-2,1,-4];
-var sum = 0;
-for (i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-        sum += arr[i];
-    }
-}
-console.log(sum)
+// // task 8
 
-// task13
+// let newArr = [1, 2, 3];
+// let test = newArr
+// function f(arr) {
+//     if (Array.isArray(arr) && arr.length > 0) {
+//         if (arr.length === 0) {
+//             return
+//         } else {
+//             console.log(arr.toString())
+//             return f(arr.splice(1,))
+            
+//         }
+//     } else if (arr.length < 0) {
+//         throw new Error(`parameter can't be an empty`)
+//     } else {
+//         throw new Error(`parameter type should be an array`)
+//     }
 
-var arr = [1, 2, 5, 9, 4, 13, 4, 10];
-for (i = 0; i < arr.length; i++) {
-    if (arr[i] === 4) {
-        console.log(true);
-        break;
-    }
-}
+        
+// }
 
-// task 14
+// f(newArr);
 
-var n = 1000;
-var num = 0;
-for (i = 1; n > 50; n = n / 2, i++) {
-    num = i  
-}
-console.log(num, n)
 
